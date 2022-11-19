@@ -1,26 +1,29 @@
 
-import { Form, Row, Button} from "react-bootstrap";
+import { Form, Row, Button } from "react-bootstrap";
+import styled from "styled-components";
 
-import { Styled } from './styled';
+import { StyledForm } from './StyledForm';
 
-export function FormPerfis(){
-    <Styled>
-    <Form>
-        <Row>
-            <h3>Lcalizador de Perfis</h3>
-        </Row>
-        <Form.Group className="mb-12" controlId="formBasicName">
-            <Form.Label>Nome: </Form.Label>
-            <Form.Control type="text" placeholder="Digite seu Nome" />
-        </Form.Group>
-        <Row>
+export function FormPerfis() {
+
+    return (
+        <div>
+            <StyledForm>
+                <form>
+                    
+
+                        <input type="text" name="name" />
+                   
+
+                </form>
+            </StyledForm>
+
+            <Button>
+                Buscar
+            </Button>
+           
+            </div>
+            )
             
-            
-        <Button variant="primary" type="submit">
-           Buscar
-        </Button>
-    </Form>
-</Styled>
-
 }
 
