@@ -1,32 +1,45 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.div`
-    
+    width: 50%;
     padding:30px;
-   
-    width:50px;
+    margin:0;
+    width:50%;
     aligin-itens;
-     display: flex;
-     flex-direction:column;
-  
-   
-    border-radius:5px;
-    align-items: center;
-    color:#ffffff;
+    display: flex;
+    flex-direction:column;
 
     Button{
-        color:#5641D6;
+        font-family:arial;
+        margin-top:20px;
+        width:80%;
+        color:#ffffff;
         border-radius:5px;
+        background-color:#1e0be6;
         
-        
-
-
     }
 
     input{
-       
-        height:40px;
-        padding:5px;
+       width:80%;
+        margin-botton:20px;
+        height:44px;
+        padding:0 8px;
+        
     }
+
+    
     
 `
+export const StyledCotain = styled.div`
+    
+    padding:40px;
+   justify-content: center;
+    align-items: center;
+    width:100%;
+     display:flex;
+     
+    
+   
+
+
+     `

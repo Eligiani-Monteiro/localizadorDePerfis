@@ -1,29 +1,43 @@
 
+import { useState } from "react";
 import { Form, Row, Button } from "react-bootstrap";
 import styled from "styled-components";
+import { getPerfil } from "../api/perfis";
+import { CardPerfil } from "./CardPerfil";
 
-import { StyledForm } from './StyledForm';
+import { StyledCotain, StyledForm } from './StyledForm';
 
-export function FormPerfis() {
+export default function FormPerfis() {
+  const [perfilName, setPerfilName] = useState("")
+  const [data, setData] = useState({})
 
-    return (
-        <div>
-            <StyledForm>
-                <form>
-                    
+  async function pegar() {
+    const dados = await getPerfil(perfilName)
+    setData(dados)
 
-                        <input type="text" name="name" />
-                   
+  }
 
-                </form>
-            </StyledForm>
 
-            <Button>
-                Buscar
-            </Button>
-           
-            </div>
-            )
-            
+  return (
+
+    <StyledCotain>
+      <StyledForm>
+        <Form>
+          <Form.Group className="mb-3" controlId="">
+            <Form.Control type="text"onChange={(a) =>setPerfilName(a.target.value)}/>
+            <Form.Text className="text-muted">
+            </Form.Text>
+          </Form.Group>
+
+          <Button onClick={pegar}>
+            Buscar
+          </Button>
+        </Form>
+      </StyledForm>
+      {Object.keys(data).length !== null ? <CardPerfil nome={data}/> :null}
+    </StyledCotain>
+
+  )
+
 }
 
