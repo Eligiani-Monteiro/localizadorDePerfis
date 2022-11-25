@@ -10,10 +10,24 @@ import { StyledCotain, StyledForm } from './StyledForm';
 export default function FormPerfis() {
   const [perfilName, setPerfilName] = useState("")
   const [data, setData] = useState({})
+  const [invalido, setInvalido] = useState(false);
+
 
   async function pegar() {
-    const dados = await getPerfil(perfilName)
-    setData(dados)
+    if (perfilName) {
+      const data = await getPerfil(perfilName);
+  
+
+      if (data)
+        setData(data);
+     
+      else
+        setData({});
+        setInvalido(true)
+    }
+    else {
+      setData({});
+    }
 
   }
 
@@ -22,6 +36,7 @@ export default function FormPerfis() {
 
     <StyledCotain>
       <StyledForm>
+      {invalido ? "Usuario não Localizado": ""}
         <Form>
           <Form.Group className="mb-3" controlId="">
             <Form.Control type="text"onChange={(a) =>setPerfilName(a.target.value)}/>
