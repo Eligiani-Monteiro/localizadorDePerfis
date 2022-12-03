@@ -7,6 +7,7 @@ import { CardPerfil } from "./CardPerfil";
 import { FadeLoader } from 'react-spinners'
 
 import { StyledCotain, StyledForm } from './StyledForm';
+import { StyledCardPerfil } from "./StyledCardPerfil";
 
 
 export default function FormPerfis() {
@@ -32,6 +33,8 @@ export default function FormPerfis() {
     else {
       setData({});
     }
+    
+
 
   }
 
@@ -55,7 +58,10 @@ export default function FormPerfis() {
         </Form>
 
       </StyledForm>
-      {isLoading ? <FadeLoader color="#36d7b7"/> : <CardPerfil nome={data} />}
+      <StyledCardPerfil>
+          {isLoading ? <FadeLoader color= {"#ffffff"}/>:<CardPerfil nome={data}/>}
+      </StyledCardPerfil>
+       
      
 
       
