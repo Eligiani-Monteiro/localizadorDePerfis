@@ -35,9 +35,7 @@ export default function FormPerfis() {
     }
     
 
-
   }
-
 
   return (
 
@@ -61,9 +59,7 @@ export default function FormPerfis() {
       <StyledCardPerfil>
           {isLoading ? <FadeLoader color= {"#ffffff"}/>:<CardPerfil nome={data}/>}
       </StyledCardPerfil>
-       
-     
-
+      
       
     </StyledCotain>
 

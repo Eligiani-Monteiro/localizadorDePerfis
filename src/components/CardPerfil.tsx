@@ -1,7 +1,7 @@
 import React from "react"
+import { FaArrowAltCircleRight } from "react-icons/fa"
 import { FadeLoader } from "react-spinners"
 import { StyledCardPerfil } from "./StyledCardPerfil"
-
 
 type CardPerfilProps = {
     nome: {
@@ -11,19 +11,17 @@ type CardPerfilProps = {
         html_url?: string
     }
 }
-export function CardPerfil({nome}: CardPerfilProps) {
-   
-   
+export function CardPerfil({ nome }: CardPerfilProps) {
+
     return (
         <>
-           <img src={nome.avatar_url} />
-           <div className='info'>
-               <h2>{nome.name}</h2>
-               <a href={nome.html_url}>Ver Perfil GitHub
-             
-               </a>
-           </div>
+            <img src={nome.avatar_url} />
+            <div className='info'>
+                <h2>{nome.name}</h2>
+                <a href={nome.html_url}>Ver Perfil GitHub    <FaArrowAltCircleRight size={13} />
+                </a>
+            </div>
         </>
-       
-        )
+
+    )
 }

@@ -15,7 +15,7 @@ export const StyledForm = styled.div`
         width:80%;
         color:#ffffff;
         border-radius:5px;
-        background-color:#1e0be6;
+        background-color:#6b00d6;
         
     }
 
@@ -24,6 +24,8 @@ export const StyledForm = styled.div`
         margin-botton:20px;
         height:44px;
         padding:0 8px;
+        border-radius:5px;
+        border: 1px solid gray;
         
     }
 
@@ -36,6 +38,7 @@ export const StyledCotain = styled.div`
    justify-content: center;
     align-items: center;
     width:100%;
+
      display:flex;
      
     

@@ -12,7 +12,7 @@ flex-direction:column;
 align-items: center;
 justify-content:center;
 gap: 20px;
-background-color: #1e0be6;
+background-color: #6b00d6;
 border-radius:10px;
 
 a{
